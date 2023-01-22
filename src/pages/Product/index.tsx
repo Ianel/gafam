@@ -27,12 +27,16 @@ const ProductPage = () => {
     }, []);
 
     return (
-        <div>
+        <div className="flex flex-col h-screen">
             <PreviousButton route={ROUTES.COMPANY} />
-            {companyProducts &&
-                companyProducts.value.map((product: ICompanyProduct, index) => {
-                    return <ProductCard {...product} />;
-                })}
+            <div className="md:flex md:flex-row md:flex-wrap lg:justify-center lg:items-center lg:h-full md:gap-x-4">
+                {companyProducts &&
+                    companyProducts.value.map(
+                        (product: ICompanyProduct, index) => {
+                            return <ProductCard {...product} />;
+                        }
+                    )}
+            </div>
         </div>
     );
 };
