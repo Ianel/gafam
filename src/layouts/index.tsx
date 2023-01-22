@@ -34,7 +34,7 @@ const MainLayout: React.FC<PageProps> = ({ children }) => {
                 </h1>
             </header>
             <hr />
-            <main className="h-[87vh]">{children}</main>
+            <main className="p-5">{children}</main>
             <hr />
             <footer className="text-sky-600 p-5 text-center">
                 &copy; Copyright {new Date(Date.now()).getFullYear()} | All
