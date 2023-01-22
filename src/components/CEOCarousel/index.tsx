@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-cards";
 
-import "../styles.css";
+import "../../styles.css";
 
 // import required modules
 
@@ -21,7 +21,7 @@ export interface ICEOS {
     CEOS: ICEO[];
 }
 
-const Carousel = ({ CEOS }: ICEOS) => {
+const CEOCarousel = ({ CEOS }: ICEOS) => {
     return (
         <div className="h-[90vh] w-full flex justify-center items-center md:hidden">
             <Swiper
@@ -58,4 +58,4 @@ const Carousel = ({ CEOS }: ICEOS) => {
     );
 };
 
-export default Carousel;
+export default CEOCarousel;

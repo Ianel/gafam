@@ -28,7 +28,7 @@ const MainLayout: React.FC<PageProps> = ({ children }) => {
                 )}
                 <h1
                     className=" text-xl cursor-pointer uppercase font-bold"
-                    onClick={() => navigate(ROUTES.HOME)}
+                    onClick={handleClick}
                 >
                     Gafam
                 </h1>

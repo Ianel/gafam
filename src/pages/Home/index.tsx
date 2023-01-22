@@ -11,7 +11,7 @@ const HomePage: React.FC = () => {
             text: "CEO Overview",
         },
         {
-            route: ROUTES.PRODUCTS,
+            route: ROUTES.COMPANY,
             text: "Products",
         },
     ];

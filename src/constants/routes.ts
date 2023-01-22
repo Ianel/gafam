@@ -1,4 +1,5 @@
 export const HOME = "/";
-export const PRODUCTS = "/products";
-export const PRODUCT = "/products/:id";
+export const COMPANY = "/company";
+export const PRODUCTS = "/products/:id";
+export const PRODUCT = "/products";
 export const CEO = "/ceo";

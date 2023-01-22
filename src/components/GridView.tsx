@@ -1,9 +1,9 @@
 import React from "react";
-import { ICEOS } from "./Carousel";
+import { ICEOS } from "../components/CEOCarousel";
 
 const GridView = ({ CEOS }: ICEOS) => {
     return (
-        <div className="md:flex hidden flex-wrap justify-center gap-5 lg:h-[85vh] items-center">
+        <div className="md:flex hidden flex-wrap justify-center gap-5 lg:min-h-screen items-center">
             {CEOS &&
                 CEOS.map((ceo, index) => {
                     return (
