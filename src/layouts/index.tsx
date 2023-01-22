@@ -6,12 +6,14 @@ interface PageProps {
 
 const MainLayout: React.FC<PageProps> = ({ children }) => {
     return (
-        <div className="h-full w-full bg-slate-500">
-            <header className="p-5 text-xl uppercase bg-violet-400">
+        <div className="h-full w-full">
+            <header className="p-5 text-xl uppercase text-sky-600 font-bold">
                 Gafam
             </header>
-            <main className="h-screen">{children}</main>
-            <footer className="bg-green-500 p-5 text-center">
+            <hr />
+            <main className="h-[87vh]">{children}</main>
+            <hr />
+            <footer className="text-sky-600 p-5 text-center">
                 &copy; Copyright {new Date(Date.now()).getFullYear()} | All
                 rights reserved
             </footer>
