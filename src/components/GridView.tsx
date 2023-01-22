@@ -12,6 +12,7 @@ const GridView = ({ CEOS }: ICEOS) => {
                             className="flex flex-col items-center"
                         >
                             <img
+                                loading="lazy"
                                 className="w-64 h-64 object-cover"
                                 src={ceo.image}
                                 alt={ceo.value}

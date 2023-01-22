@@ -37,7 +37,11 @@ const CEOCarousel = ({ CEOS }: ICEOS) => {
                                 className="even:bg-sky-700 odd:bg-green-700"
                                 key={ceo.value}
                             >
-                                <img src={ceo.image} alt={ceo.value} />
+                                <img
+                                    src={ceo.image}
+                                    alt={ceo.value}
+                                    loading="lazy"
+                                />
                                 <h3 className="font-bold mt-4">{ceo.value}</h3>
                                 <p className="my-3 text-red-700 text-sm">
                                     {ceo.company}

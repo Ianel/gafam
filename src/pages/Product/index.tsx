@@ -26,7 +26,7 @@ const ProductPage = () => {
     }, []);
 
     return (
-        <div className="flex flex-col h-screen">
+        <div className="flex flex-col">
             <Helmet>
                 <title>Gafam - Products</title>
                 <meta

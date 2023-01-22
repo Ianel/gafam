@@ -43,6 +43,7 @@ const HomePage: React.FC = () => {
                         className="w-full object-cover"
                         src={homeFirst}
                         alt="Home Tech 1"
+                        loading="lazy"
                     />
                 </div>
                 <div className="flex-1 flex justify-center items-center">

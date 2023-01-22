@@ -23,7 +23,12 @@ const CompanyCard = ({ logo, company, id }: ICompany) => {
             onClick={handleClick}
             className="shadow-lg flex flex-col md:mx-auto justify-center items-center w-full md:w-fit h-96 md:h-64 p-6"
         >
-            <img className="object-cover md:w-48" src={logo} alt={company} />
+            <img
+                loading="lazy"
+                className="object-cover md:w-48"
+                src={logo}
+                alt={company}
+            />
             <h2>{company}</h2>
         </button>
     );

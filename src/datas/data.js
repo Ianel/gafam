@@ -32,7 +32,7 @@ import icloud from "../assets/images/products/apple/icloud-logo.png";
 import ipad from "../assets/images/products/apple/ipad-logo.png";
 import iphone from "../assets/images/products/apple/iphone-logo.png";
 import itunes from "../assets/images/products/apple/itunes-logo.png";
-import music from "../assets/images/products/apple/music-logo.jpg";
+import music from "../assets/images/products/apple/music-logo.png";
 import watch from "../assets/images/products/apple/watch-logo.png";
 import tvPlus from "../assets/images/products/apple/tv-plus-logo.png";
 
