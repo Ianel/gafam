@@ -16,18 +16,20 @@ export interface IProduct {
 
 const ProductsPage = () => {
     return (
-        <div className="flex flex-col">
+        <div className="flex flex-col md:h-screen">
             <PreviousButton route={ROUTES.HOME} />
-            {products.map((product: IProduct, index: number) => {
-                return (
-                    <CompanyCard
-                        key={product.company}
-                        logo={product.logo}
-                        company={product.company}
-                        id={product.id}
-                    />
-                );
-            })}
+            <div className="flex md:flex-row md:justify-center lg:h-full md:items-center md:gap-x-5 flex-wrap">
+                {products.map((product: IProduct, index: number) => {
+                    return (
+                        <CompanyCard
+                            key={product.company}
+                            logo={product.logo}
+                            company={product.company}
+                            id={product.id}
+                        />
+                    );
+                })}
+            </div>
         </div>
     );
 };
