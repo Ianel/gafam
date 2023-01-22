@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { FaChevronLeft } from "react-icons/fa";
 import * as ROUTES from "../constants/routes";
+import { ButtonContext } from "../context";
 
 interface PageProps {
     children: JSX.Element;
@@ -8,14 +10,28 @@ interface PageProps {
 
 const MainLayout: React.FC<PageProps> = ({ children }) => {
     const navigate = useNavigate();
+    const { showNavButton, setShowNavButton } = useContext(ButtonContext);
+
+    const handleClick = () => {
+        setShowNavButton(false);
+        navigate(ROUTES.HOME);
+    };
 
     return (
         <div className="h-full w-full">
-            <header
-                className="p-5 text-xl uppercase text-sky-600 font-bold"
-                onClick={() => navigate(ROUTES.HOME)}
-            >
-                Gafam
+            <header className="p-5 flex items-center text-sky-600 gap-x-3">
+                {showNavButton && (
+                    <FaChevronLeft
+                        className="font-bold"
+                        onClick={handleClick}
+                    />
+                )}
+                <h1
+                    className=" text-xl uppercase font-bold"
+                    onClick={() => navigate(ROUTES.HOME)}
+                >
+                    Gafam
+                </h1>
             </header>
             <hr />
             <main className="h-[87vh]">{children}</main>

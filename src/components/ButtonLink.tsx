@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
+import { useNavigate } from "react-router-dom";
+import { ButtonContext } from "../context";
 import useButton from "../hooks/useButton";
 
 export interface ButtonLinkProps {
@@ -7,7 +9,17 @@ export interface ButtonLinkProps {
 }
 
 const ButtonLink: React.FC<ButtonLinkProps> = ({ route, text }) => {
-    const { handleClick } = useButton(route);
+    //const { handleClick } = useButton(route);
+
+    const { setShowNavButton } = useContext(ButtonContext);
+    const navigate = useNavigate();
+
+    const handleClick = (e: React.FormEvent<HTMLButtonElement>) => {
+        e.preventDefault();
+
+        setShowNavButton(true);
+        navigate(route);
+    };
 
     return (
         <button
