@@ -1,6 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import CustomLink, { CustomLinkProps } from "../../components/CustomLink";
+import ButtonLink, { ButtonLinkProps } from "../../components/ButtonLink";
 import * as ROUTES from "../../constants/routes";
 
 const HomePage: React.FC = () => {
@@ -18,8 +17,8 @@ const HomePage: React.FC = () => {
     return (
         <div className="flex flex-col justify-center items-center h-full">
             <div className="flex flex-col gap-5 w-full">
-                {links.map((link: CustomLinkProps, index: number) => {
-                    return <CustomLink {...link} />;
+                {links.map((link: ButtonLinkProps, index: number) => {
+                    return <ButtonLink key={index} {...link} />;
                 })}
             </div>
         </div>
