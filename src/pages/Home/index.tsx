@@ -22,8 +22,9 @@ const HomePage: React.FC = () => {
                 className="object-cover h-1/2"
                 src={homeFirst}
                 alt="Home Tech 1"
+                loading="lazy"
             />
-            <div className="flex flex-col gap-5 w-full">
+            <div className="flex flex-col gap-y-5 w-full">
                 {links.map((link: ButtonLinkProps, index: number) => {
                     return <ButtonLink key={index} {...link} />;
                 })}
@@ -31,6 +32,7 @@ const HomePage: React.FC = () => {
             <img
                 className="object-cover h-1/2"
                 src={homeSecond}
+                loading="lazy"
                 alt="Home Tech 2"
             />
         </div>

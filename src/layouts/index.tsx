@@ -22,12 +22,12 @@ const MainLayout: React.FC<PageProps> = ({ children }) => {
             <header className="p-5 flex items-center text-sky-600 gap-x-3">
                 {showNavButton && (
                     <FaChevronLeft
-                        className="font-bold"
+                        className="font-bold cursor-pointer"
                         onClick={handleClick}
                     />
                 )}
                 <h1
-                    className=" text-xl uppercase font-bold"
+                    className=" text-xl cursor-pointer uppercase font-bold"
                     onClick={() => navigate(ROUTES.HOME)}
                 >
                     Gafam
