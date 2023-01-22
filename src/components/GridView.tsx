@@ -17,7 +17,7 @@ const GridView = ({ CEOS }: ICEOS) => {
                                 alt={ceo.value}
                             />
                             <h3 className="font-bold mt-4">{ceo.value}</h3>
-                            <p className="my-3 text-sky-700 text-sm">
+                            <p className="my-3 text-sky-700 font-bold">
                                 {ceo.company}
                             </p>
                             <p className="text-sm">

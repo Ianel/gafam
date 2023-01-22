@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
-import { FaChevronLeft } from "react-icons/fa";
-import { useNavigate, useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import ProductCard from "../../components/ProductElement";
 import { products } from "../../datas/data";
 import { IProduct } from "../../pages/Companies";
@@ -14,7 +14,6 @@ export interface ICompanyProduct {
 }
 
 const ProductPage = () => {
-    const navigate = useNavigate();
     const { id } = useParams();
     const [companyProducts, setCompanyProducts] = useState<IProduct>();
 
@@ -28,6 +27,17 @@ const ProductPage = () => {
 
     return (
         <div className="flex flex-col h-screen">
+            <Helmet>
+                <title>Gafam - Products</title>
+                <meta
+                    name="description"
+                    content="The products that the GAFAM provide to the world"
+                />
+                <meta
+                    name="keywords"
+                    content="Gmail, App Store, Linkedin, Amazon Web Services, Facebook"
+                />
+            </Helmet>
             <PreviousButton route={ROUTES.COMPANY} />
             <div className="md:flex md:flex-row md:flex-wrap lg:justify-center lg:items-center lg:h-full md:gap-x-4">
                 {companyProducts &&
